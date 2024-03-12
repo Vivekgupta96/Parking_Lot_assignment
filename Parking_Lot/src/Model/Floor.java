@@ -1,3 +1,7 @@
+package Model;
+
+import Model.Vehicle;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -36,7 +40,7 @@ public class Floor {
 
 	@Override
 	public String toString() {
-		return "Floor [floorNumber=" + floorNumber + ", vehicleSpaces=" + vehicleSpaces + "]";
+		return "Model.Floor [floorNumber=" + floorNumber + ", vehicleSpaces=" + vehicleSpaces + "]";
 	}
 
 

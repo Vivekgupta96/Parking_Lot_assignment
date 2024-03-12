@@ -1,3 +1,7 @@
+package Model;
+
+import Model.Vehicle;
+
 public class VehicleSpace {
 	
 	
@@ -64,7 +68,7 @@ public class VehicleSpace {
 
 	@Override
 	public String toString() {
-		return "VehicleSpace [spaceNumber=" + spaceNumber + ", availability=" + availability + ", vehicleType="
+		return "Model.VehicleSpace [spaceNumber=" + spaceNumber + ", availability=" + availability + ", vehicleType="
 				+ vehicleType + ", parkedVehicle=" + parkedVehicle + "]";
 	}
 

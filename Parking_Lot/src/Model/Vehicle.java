@@ -1,3 +1,5 @@
+package Model;
+
 public class Vehicle {
 	
 	private String type;
@@ -36,7 +38,7 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle [type=" + type + ", registrationNumber=" + registrationNumber + ", color=" + color + "]";
+		return "Model.Vehicle [type=" + type + ", registrationNumber=" + registrationNumber + ", color=" + color + "]";
 	}
     
 	    

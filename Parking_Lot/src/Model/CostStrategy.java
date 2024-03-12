@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,11 +22,10 @@ public class CostStrategy {
 		public double getHourlyRate(String vehicleType) {
 	        return hourlyRates.getOrDefault(vehicleType, 0.0);
 	    }
-
-
+		
 		@Override
 		public String toString() {
-			return "CostStrategy [hourlyRates=" + hourlyRates + "]";
+			return "Model.CostStrategy [hourlyRates=" + hourlyRates + "]";
 		}
 		
 		

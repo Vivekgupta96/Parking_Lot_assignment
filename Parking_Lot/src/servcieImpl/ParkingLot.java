@@ -1,11 +1,15 @@
+package servcieImpl;
+
+import Model.*;
+import service.ParkingInterface;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
-
-public class ParkingLot implements ParkingInterface{
+public class ParkingLot implements ParkingInterface {
 	   
 	private int totalNumberFloors;
     private int capacityPerVehicleType;
@@ -42,7 +46,7 @@ public class ParkingLot implements ParkingInterface{
             if (floor.isSpaceAvailable(vehicleType)) {
                 VehicleSpace parkingSpace = floor.parkVehicle(vehicleType, vehicle);
                 if (parkingSpace != null) {
-                    System.out.println("Vehicle parked successfully. Space Number: " + parkingSpace.getSpaceNumber());
+                    System.out.println("Model.Vehicle parked successfully. Space Number: " + parkingSpace.getSpaceNumber());
                     return true;
                 }
             }
@@ -57,14 +61,14 @@ public class ParkingLot implements ParkingInterface{
             for (Map.Entry<String, List<VehicleSpace>> entry : floor.getVehicleSpaces().entrySet()) {
                 for (VehicleSpace space : entry.getValue()) {
                     if (!space.isAvailability() && space.removeVehicle().getRegistrationNumber().equals(registrationNumber)) {
-                        System.out.println("Vehicle removed successfully from Space Number: " + space.getSpaceNumber());
+                        System.out.println("Model.Vehicle removed successfully from Space Number: " + space.getSpaceNumber());
                         return space.removeVehicle();
                     }
                 }
             }
         }
 
-        System.out.println("Vehicle with registration number " + registrationNumber + " not found in the parking lot.");
+        System.out.println("Model.Vehicle with registration number " + registrationNumber + " not found in the parking lot.");
         return null;
     }
 
@@ -80,7 +84,7 @@ public class ParkingLot implements ParkingInterface{
 
 	@Override
 	public String toString() {
-		return "ParkingLot [totalNumberFloors=" + totalNumberFloors + ", capacityPerVehicleType="
+		return "servcieImpl.ParkingLot [totalNumberFloors=" + totalNumberFloors + ", capacityPerVehicleType="
 				+ capacityPerVehicleType + ", floors=" + floors + ", costStrategy=" + costStrategy + "]";
 	}
     
